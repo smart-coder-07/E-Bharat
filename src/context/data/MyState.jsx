@@ -60,11 +60,10 @@ function MyState(props) {
       await addDoc(productRef, products);
       toast.success("Product Add successfully");
       getProductData();
-      closeModal();
       setLoading(false);
       setTimeout(() => {
         window.location.href = "/dashboard";
-      }, 2000);
+      }, 1000);
     } catch (error) {
       console.log(error);
       setLoading(false);

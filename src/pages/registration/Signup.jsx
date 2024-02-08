@@ -1,13 +1,14 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import myContext from "../../context/data/MyContext";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../../firebase/firebaseConfig";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
 import Loader from "../../components/loader/Loader";
+import myContext from "../../context/data/myContext";
 
 function Signup() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,9 +37,11 @@ function Signup() {
       setName("");
       setEmail("");
       setPassword("");
+      navigate("/login");
+      toast.info("Please Login Here");
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      toast.error("Please Enter Correct Detail");
       setLoading(false);
     }
   };

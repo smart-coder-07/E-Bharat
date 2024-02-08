@@ -18,8 +18,7 @@ function Testimonial() {
             className=" text-center text-2xl font-semibold mb-10"
             style={{ color: mode === "dark" ? "white" : "" }}
           >
-            What our <span className=" text-pink-500">customers</span> are
-            saying
+            What our <span className=" text-pink-500">Team</span> are saying
           </h2>
           <div className="flex flex-wrap -m-4">
             <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
@@ -27,29 +26,30 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://ecommerce-sk.vercel.app/img/kamal.png"
+                  src="Profile.jpg"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  I'm entry-level software developers that assist the
+                  development team with all aspects of software design and
+                  coding. My primary role is to learn the codebase, attend
+                  design meetings, write basic code, fix bugs, and assist the
+                  Development Manager in all design-related tasks.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  Kamal Nayan Upadhyay
+                  Atul Tiwari
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="text-gray-500"
                 >
-                  Senior Product Designer
+                  Juniar Software Developer
                 </p>
               </div>
             </div>
@@ -58,23 +58,25 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://cdn-icons-png.flaticon.com/128/2763/2763444.png"
+                  src="https://www.beardresource.com/wp-content/uploads/2022/09/scruffy-tapered-beard.jpg"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  I'm a tech professional who carries out the process of
+                  conceiving, designing, and coding a user interface flow that
+                  provides the smoothest user experience possible. This process
+                  involves not just the combination of design and psychology
+                  common to the field of UI design, but also web development as
+                  well.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Kamal Jha
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
@@ -89,29 +91,31 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://webknudocs.vercel.app/logo/react.png"
+                  src="https://images.statusfacebook.com/profile_pictures/stylish-boys/boys-profile-pics-847.jpg"
                 />
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="leading-relaxed"
                 >
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                  I'm a skilled professional and designs high-level concepts and
+                  user interface (UI) layouts for software applications. We
+                  collaborate with other architects and software engineers to
+                  ensure that the final product meets all requirements outlined
+                  in the original designs then i confirm it and send to the next
+                  process.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-pink-500 mt-6 mb-4" />
                 <h2
                   style={{ color: mode === "dark" ? "#ff4162" : "" }}
                   className="text-gray-900 font-medium title-font tracking-wider text-sm uppercase"
                 >
-                  React Js
+                  Vishnu Dixit
                 </h2>
                 <p
                   style={{ color: mode === "dark" ? "white" : "" }}
                   className="text-gray-500"
                 >
-                  CTO
+                  Architect
                 </p>
               </div>
             </div>

@@ -24,14 +24,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/order"
-            element={
-              <ProtectedRoutes>
-                <Order />
-              </ProtectedRoutes>
-            }
-          />
+          <Route path="/order" element={<Order />} />
           <Route path="/cart" element={<Cart />} />
           <Route
             path="/dashboard"
@@ -70,14 +63,6 @@ function App() {
 }
 
 export default App;
-
-export const ProtectedRoutes = ({ children }) => {
-  if (localStorage.getItem("user")) {
-    return children;
-  } else {
-    return <Navigate to="/login" />;
-  }
-};
 
 export const ProtectedRoutesForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem("user"));

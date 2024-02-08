@@ -8,10 +8,12 @@ import { deleteFromCart } from "../../redux/CartSlice";
 import { toast } from "react-toastify";
 import { fireDB } from "../../firebase/firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const context = useContext(myContext);
   const { mode } = context;
+  const navigate = useNavigate();
 
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
@@ -105,6 +107,7 @@ function Cart() {
         try {
           const orderRef = collection(fireDB, "orders");
           addDoc(orderRef, orderInfo);
+          navigate("/order");
         } catch (error) {
           console.log(error);
         }

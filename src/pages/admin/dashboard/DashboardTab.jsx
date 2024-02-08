@@ -3,8 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaUser, FaCartPlus } from "react-icons/fa";
 import { AiFillShopping, AiFillPlusCircle, AiFillDelete } from "react-icons/ai";
-import myContext from "../../../context/data/myContext";
 import { Link } from "react-router-dom";
+import myContext from "../../../context/data/myContext";
 
 function DashboardTab() {
   const context = useContext(myContext);
@@ -29,9 +29,6 @@ function DashboardTab() {
     setIsOpen(true);
   }
 
-  const add = () => {
-    window.location.href = "/addproduct";
-  };
   return (
     <>
       <div className="container mx-auto">
@@ -80,9 +77,8 @@ function DashboardTab() {
                   Product Details
                 </h1>
                 <div className=" flex justify-end">
-                  <button
-                    onClick={add}
-                    type="button"
+                  <Link
+                    to={"/addproduct"}
                     className="focus:outline-none text-white bg-pink-600 shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] border hover:bg-pink-700 outline-0 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
                     style={{
                       backgroundColor: mode === "dark" ? "rgb(46 49 55)" : "",
@@ -93,7 +89,7 @@ function DashboardTab() {
                     <div className="flex gap-2 items-center">
                       Add Product <FaCartPlus size={20} />
                     </div>
-                  </button>
+                  </Link>
                 </div>
                 <div className="relative overflow-x-auto ">
                   <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400  ">

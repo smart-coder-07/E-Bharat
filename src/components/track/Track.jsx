@@ -38,9 +38,7 @@ function Track() {
                 >
                   Premium Tshirts
                 </h2>
-                <p className="leading-relaxed">
-                  Our T-Shirts are 100% made of cotton.
-                </p>
+                <p className="leading-relaxed">Our Product are 100% Branded.</p>
               </div>
             </div>
             <div className="p-4 md:w-1/3 sm:w-1/2 w-full">

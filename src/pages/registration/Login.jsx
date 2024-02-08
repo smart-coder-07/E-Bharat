@@ -23,6 +23,7 @@ function Login() {
       navigate("/");
       setLoading(false);
     } catch (error) {
+      toast.error("Please Enter Correct Detail");
       console.log(error);
       setLoading(false);
     }
