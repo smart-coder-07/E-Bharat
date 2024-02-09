@@ -115,7 +115,13 @@ export default function Navbar() {
                       </a>
                     </div>
                   ) : (
-                    ""
+                    <Link
+                      to={"/signup"}
+                      className="text-sm font-medium text-gray-700 "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Signup
+                    </Link>
                   )}
                   <div className="flow-root">
                     <Link
