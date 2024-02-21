@@ -4,7 +4,7 @@ import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaUser, FaCartPlus } from "react-icons/fa";
 import { AiFillShopping, AiFillPlusCircle, AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import myContext from "../../../context/data/myContext";
+import myContext from "../../../context/data/MyContext";
 
 function DashboardTab() {
   const context = useContext(myContext);
@@ -79,7 +79,7 @@ function DashboardTab() {
                 <div className=" flex justify-end">
                   <Link
                     to={"/addproduct"}
-                    className="focus:outline-none text-white bg-pink-600 shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] border hover:bg-pink-700 outline-0 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
+                    className="focus:outline-none text-white bg-blue-700  shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] border hover:bg-pink-700 outline-0 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
                     style={{
                       backgroundColor: mode === "dark" ? "rgb(46 49 55)" : "",
                       color: mode === "dark" ? "white" : "",
@@ -243,7 +243,6 @@ function DashboardTab() {
                 </h1>
 
                 {order.map((allorder, index) => {
-                  console.log(order);
                   return (
                     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                       <thead

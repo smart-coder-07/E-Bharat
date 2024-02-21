@@ -12,8 +12,6 @@ const Home = () => {
   const dispach = useDispatch();
   const cartItem = useSelector((state) => state.cart);
 
-  console.log(cartItem);
-
   const addCart = () => {
     dispach(addToCart("shirt"));
   };

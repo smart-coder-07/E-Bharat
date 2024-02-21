@@ -72,7 +72,9 @@ function Order() {
           </div>
         </>
       ) : (
-        <h2 className=" text-center tex-2xl text-white">Not Order</h2>
+        <h1 className="mt-[100px] mb-[10%] text-center text-3xl font-bold text-black">
+          No Order...
+        </h1>
       )}
     </Layout>
   );

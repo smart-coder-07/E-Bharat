@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const context = useContext(myContext);
   const { mode } = context;
+  const user = JSON.parse(localStorage.getItem("user"));
+  const logout = () => {
+    localStorage.clear("user");
+    navigate("/");
+  };
   return (
     <footer
       className="text-gray-600 body-font bg-gray-300"
@@ -24,36 +29,58 @@ const Footer = () => {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a
+                <Link
+                  to={"/"}
                   className="text-gray-600 hover:text-gray-800"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  Home
-                </a>
+                  All Products
+                </Link>
               </li>
               <li>
-                <a
+                <Link
+                  to={"/order"}
                   className="text-gray-600 hover:text-gray-800"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Order
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  className="text-gray-600 hover:text-gray-800"
-                  style={{ color: mode === "dark" ? "white" : "" }}
-                >
-                  Local For Vocal
-                </a>
-              </li>
-              <li>
-                <a
+                <Link
+                  to={"/cart"}
                   className="text-gray-600 hover:text-gray-800"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Cart
-                </a>
+                </Link>
+              </li>
+              <li>
+                {user ? (
+                  <div className="flow-root">
+                    <a
+                      onClick={logout}
+                      className="text-gray-600 hover:text-gray-800 cursor-pointer"
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Logout
+                    </a>
+                  </div>
+                ) : (
+                  <Link
+                    to={"/signup"}
+                    className="text-gray-600 hover:text-gray-800 cursor-pointer "
+                    style={{ color: mode === "dark" ? "white" : "" }}
+                  >
+                    Signup
+                  </Link>
+                )}
+              </li>
+              <li>
+                <a
+                  className="text-gray-600 hover:text-gray-800"
+                  style={{ color: mode === "dark" ? "white" : "" }}
+                ></a>
               </li>
             </nav>
           </div>
@@ -134,63 +161,63 @@ const Footer = () => {
                 className=" text-2xl font-bold text-black  px-2 py-1 rounded"
                 style={{ color: mode === "dark" ? "white" : "" }}
               >
-                E-Bharat
+                LR-Commerce
               </h1>
             </div>
           </Link>
           <p
-            className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4"
+            className=" text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4"
             style={{ color: mode === "dark" ? "white" : "" }}
           >
-            © 2024 E-bharat — Developed by Atul Tiwari
+            © 2024 LR-Commerce — Developed by Batch - 5
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a className="text-gray-500">
+            <Link to="#" className="text-gray-500">
               <svg
-                fill="currentColor"
+                fill="blue"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="w-8 h-8 hover:bg-blue-300 cursor-pointer"
                 viewBox="0 0 24 24"
               >
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
               </svg>
-            </a>
-            <a className="ml-3 text-gray-500">
+            </Link>
+            <Link className="ml-3 text-gray-500">
               <svg
-                fill="currentColor"
+                fill="skyblue"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="w-8 h-8  hover:bg-blue-900 cursor-pointer"
                 viewBox="0 0 24 24"
               >
                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
               </svg>
-            </a>
-            <a className="ml-3 text-gray-500">
+            </Link>
+            <Link to="#" className="ml-3 text-gray-500">
               <svg
                 fill="none"
-                stroke="currentColor"
+                stroke="red"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                className="w-5 h-5"
+                className="w-8 h-8 hover:bg-red-400 cursor-pointer"
                 viewBox="0 0 24 24"
               >
                 <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
               </svg>
-            </a>
-            <a className="ml-3 text-gray-500">
+            </Link>
+            <Link to="#" className="ml-3 text-gray-500">
               <svg
                 fill="currentColor"
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={0}
-                className="w-5 h-5"
+                className="w-8 h-8 hover:bg-blue-900 cursor-pointer"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -199,7 +226,7 @@ const Footer = () => {
                 />
                 <circle cx={4} cy={4} r={2} stroke="none" />
               </svg>
-            </a>
+            </Link>
           </span>
         </div>
       </div>

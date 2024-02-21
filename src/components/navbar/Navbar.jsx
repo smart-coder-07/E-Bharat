@@ -2,10 +2,11 @@ import { Fragment, useContext, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { BsFillCloudSunFill } from "react-icons/bs";
+import { FcBusinessman } from "react-icons/fc";
 import { FiSun } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
-import myContext from "../../context/data/myContext";
 import { useSelector } from "react-redux";
+import myContext from "../../context/data/MyContext";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const context = useContext(myContext);
-  const { toggleMode, mode } = context;
+  const { toggleMode, mode, user1 } = context;
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -130,7 +131,7 @@ export default function Navbar() {
                     >
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="Profile.jpg"
+                        src="https://www.366icons.com/media/01/profile-avatar-account-icon-16699.png"
                         alt="user"
                       />{" "}
                     </Link>
@@ -162,7 +163,7 @@ export default function Navbar() {
       {/* desktop  */}
       <header className="relative bg-white">
         <p
-          className="flex h-10 items-center justify-center bg-pink-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8"
+          className="flex h-10 items-center justify-center bg-blue-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8"
           style={{
             backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
             color: mode === "dark" ? "white" : "",
@@ -195,13 +196,13 @@ export default function Navbar() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="w-6 h-6"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
@@ -215,7 +216,7 @@ export default function Navbar() {
                       className=" text-2xl font-bold text-black  px-2 py-1 rounded"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      E-Bharat
+                      LR-Commerce
                     </h1>
                   </div>
                 </Link>
@@ -288,15 +289,19 @@ export default function Navbar() {
                     </span>
                   </a>
                 </div>
-                <div className="hidden lg:ml-8 lg:flex">
-                  <a href="#" className="flex items-center text-gray-700 ">
-                    <img
-                      src="Profile.jpg"
-                      className="inline-block w-10 h-10 rounded-full"
-                      alt="user"
-                    />
-                  </a>
-                </div>
+                {user ? (
+                  <div className="hidden lg:ml-8 lg:flex">
+                    <a href="#" className="flex items-center text-gray-700 ">
+                      <img
+                        src="https://www.366icons.com/media/01/profile-avatar-account-icon-16699.png"
+                        className="inline-block w-10 h-10 rounded-full "
+                        alt="user"
+                      />
+                    </a>
+                  </div>
+                ) : (
+                  ""
+                )}
 
                 {/* Search */}
                 <div className="flex lg:ml-6">

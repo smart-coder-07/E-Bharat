@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MyContext from "./myContext";
+import MyContext from "./MyContext";
 import { fireDB } from "../../firebase/firebaseConfig";
 import {
   Timestamp,
@@ -147,7 +147,6 @@ function MyState(props) {
         setLoading(false);
       });
       setOrder(ordersArray);
-      console.log(ordersArray);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -161,6 +160,7 @@ function MyState(props) {
   }, []);
 
   const [user, setUser] = useState([]);
+  const [user1, setUser1] = useState([]);
 
   const getUserData = async () => {
     setLoading(true);
@@ -172,7 +172,7 @@ function MyState(props) {
         setLoading(false);
       });
       setUser(usersArray);
-      console.log(usersArray);
+      setUser1(usersArray);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -206,6 +206,7 @@ function MyState(props) {
         deleteProduct,
         order,
         user,
+        user1,
         searchkey,
         setSearchkey,
         filterType,

@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import myContext from "../../context/data/myContext";
+
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addToCart } from "../../redux/CartSlice";
 import { Navigate, redirect, useNavigate } from "react-router-dom";
+import myContext from "../../context/data/MyContext";
 
 function ProductCard() {
   const context = useContext(myContext);
@@ -12,7 +13,6 @@ function ProductCard() {
 
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
 
   // add to cart
   const addCart = (product) => {
@@ -27,14 +27,14 @@ function ProductCard() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-8 md:py-16 mx-auto">
-        <div class="lg:w-1/2 w-full mb-6 lg:mb-10">
+        <div className="lg:w-1/2 w-full mb-6 lg:mb-10">
           <h1
-            class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+            className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
             style={{ color: mode === "dark" ? "white" : "" }}
           >
             Our Latest Collection
           </h1>
-          <div class="h-1 w-20 bg-pink-600 rounded"></div>
+          <div className="h-1 w-20 bg-blue-600 rounded"></div>
         </div>
 
         <div className="flex flex-wrap -m-4">
@@ -68,7 +68,7 @@ function ProductCard() {
                         className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
                         style={{ color: mode === "dark" ? "white" : "" }}
                       >
-                        E-Bharat
+                        LR-Commerce
                       </h2>
                       <h1
                         className="title-font text-lg font-medium text-gray-900 mb-3"
@@ -87,7 +87,7 @@ function ProductCard() {
                         <button
                           onClick={() => addCart(item)}
                           type="button"
-                          className="focus:outline-none text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2"
+                          className="focus:outline-none text-white bg-blue-600 hover:bg-pink-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2"
                         >
                           Add To Cart
                         </button>

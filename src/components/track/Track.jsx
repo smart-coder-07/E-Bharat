@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import myContext from "../../context/data/myContext";
+import myContext from "../../context/data/MyContext";
 
 function Track() {
   const context = useContext(myContext);
@@ -18,7 +18,7 @@ function Track() {
                 }}
               >
                 <svg
-                  className="text-pink-600 w-12 h-12 mb-3 inline-block"
+                  className="text-blue-600 w-12 h-12 mb-3 inline-block"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ function Track() {
                   className="title-font font-medium text-lg text-gray-900"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
-                  Premium Tshirts
+                  Premium Items
                 </h2>
                 <p className="leading-relaxed">Our Product are 100% Branded.</p>
               </div>
@@ -55,7 +55,7 @@ function Track() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="text-pink-600 w-12 h-12 mb-3 inline-block"
+                  className="text-blue-600 w-12 h-12 mb-3 inline-block"
                 >
                   <path
                     strokeLinecap="round"
@@ -89,7 +89,7 @@ function Track() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="text-pink-600 w-12 h-12 mb-3 inline-block"
+                  className="text-blue-600 w-12 h-12 mb-3 inline-block"
                 >
                   <path
                     strokeLinecap="round"

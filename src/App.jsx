@@ -17,6 +17,10 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddProduct from "./pages/admin/pages/AddProduct";
 import UpdateProduct from "./pages/admin/pages/UpdateProduct";
+import About from "./pages/about/About";
+import Return from "./pages/returnpolicy/Return";
+import Contact from "./pages/contact/Contact";
+import Privacy from "./pages/privacy/Privacy";
 
 function App() {
   return (
@@ -26,6 +30,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/order" element={<Order />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/returnpolicy" element={<Return />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacypolicy" element={<Privacy />} />
           <Route
             path="/dashboard"
             element={
@@ -66,7 +74,7 @@ export default App;
 
 export const ProtectedRoutesForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem("user"));
-  console.log(admin.user.email);
+
   if (admin.user.email === "atulkhj@gmail.com") {
     return children;
   } else {
